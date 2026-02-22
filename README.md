@@ -11,8 +11,8 @@ The goal of this repository is not to showcase production-ready projects, but to
 ## 📂 Structure
 
 - [Basics](#basics)
-- [Flet](#flet)
-- [Machine Learning & AI](#machine-learning--ai)
+- [UI Apps](#uiapps)
+- [Machine Learning Lab](#ml-lab)
 
 ---
 
@@ -36,7 +36,7 @@ UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
 Experiments involving data processing, models, automation, and AI-related studies.
 
-👉 See folder: `/ml-ai`
+👉 See folder: `/ml-lab`
 
 ---
 
