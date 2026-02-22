@@ -20,7 +20,7 @@ The goal of this repository is not to showcase production-ready projects, but to
 
 Fundamental Python concepts, small exercises, and core language explorations.
 
-👉 See folder: `/basics`
+👉 See folder: [/basics](/basics)
 
 ---
 
@@ -36,7 +36,7 @@ UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
 Experiments involving data processing, models, automation, and AI-related studies.
 
-👉 See folder: `/ml-lab`
+👉 See folder: [/ml-lab](/ml-lab)
 
 ---
 
