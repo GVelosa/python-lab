@@ -28,7 +28,7 @@ Fundamental Python concepts, small exercises, and core language explorations.
 
 UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
-👉 See folder: `/ui-app`
+👉 See folder: [/ui-apps](/ui-apps)
 
 ---
 
