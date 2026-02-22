@@ -9,7 +9,7 @@ These projects are intentionally simple and focused on strengthening fundamental
 ## Project Index
 
 | Project | Description | Link |
-|----------|------------|----------|------|
+|---------|------------|------|
 | guess-the-number-cli | A simple terminal-based number guessing game. | [View Project](./guess-the-number-cli) |
 
 ---

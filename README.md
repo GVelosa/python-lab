@@ -1,4 +1,4 @@
-# 🧪 Python Lab
+# Python Lab
 
 This repository is my personal Python laboratory.
 
@@ -8,7 +8,7 @@ The goal of this repository is not to showcase production-ready projects, but to
 
 ---
 
-## 📂 Structure
+## Structure
 
 - [Basics](#basics)
 - [UI Apps](#uiapps)
@@ -20,7 +20,7 @@ The goal of this repository is not to showcase production-ready projects, but to
 
 Fundamental Python concepts, small exercises, and core language explorations.
 
-👉 See folder: [/basics](/basics)
+See folder: [/basics](/basics)
 
 ---
 
@@ -28,7 +28,7 @@ Fundamental Python concepts, small exercises, and core language explorations.
 
 UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
-👉 See folder: [/ui-apps](/ui-apps)
+See folder: [/ui-apps](/ui-apps)
 
 ---
 
@@ -36,11 +36,11 @@ UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
 Experiments involving data processing, models, automation, and AI-related studies.
 
-👉 See folder: [/ml-lab](/ml-lab)
+See folder: [/ml-lab](/ml-lab)
 
 ---
 
-## ⚠️ Note
+## Note
 
 This is an experimental lab repository.  
 For production-oriented or complete projects, check my other repositories.
