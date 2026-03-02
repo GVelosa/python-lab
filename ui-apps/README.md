@@ -8,8 +8,9 @@ These projects explore layout design, event handling, and reactive programming u
 
 | Project | Description | Link |
 | :--- | :--- | :--- |
+| **jokenpo** | A functional Rock-Paper-Scissors(Jo-Ken-Po) game; my introductory project to building interactive UIs with Flet. | [View Project](./jokenpo) |
 | **qr-code-generator** | A web-based utility to generate and download QR Codes instantly. | [View Project](./qr-code-generator) |
-| **educational-data-mgmt** | An application using Flet and Pandas for simple automated school data management. | [View Project](./educational-data-mgmt) |
+
 
 ## Project Development Patterns
 
