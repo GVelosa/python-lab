@@ -28,7 +28,7 @@ def main(page: ft.Page):
             confirmation_text.value = "QR Generated!"
             confirmation_text.color = ft.Colors.GREEN
 
-            download_button.visible = True
+            download_button.disabled = False
             page.update()
         else:
             confirmation_text.value = "Invalid Website Link"
@@ -39,7 +39,7 @@ def main(page: ft.Page):
         await page.launch_url(f"/qrcode.png")
 
     title = ft.Text(
-        "QR COde Generator", 
+        "QR Code Generator", 
         theme_style=ft.TextThemeStyle.HEADLINE_LARGE
         )
     introduction_text = ft.Text("Enter a website link in the field below and click the button to generate a QR code.")
@@ -60,18 +60,21 @@ def main(page: ft.Page):
     )
     download_button = ft.OutlinedButton(
         ft.Text("Download QR Code"), 
-        width=200,
         on_click=download,
-        visible = False
+        disabled = True
         )
     
     page.add(
         title,
         introduction_text,
         text_field,
-        generate_button,
+        ft.Row(
+            alignment=ft.MainAxisAlignment.CENTER,
+            controls=[
+                generate_button,download_button
+            ]
+        ),
         confirmation_text,
-        qr_image,
-        download_button
+        qr_image
     )
 ft.run(main, assets_dir="assets")
