@@ -11,8 +11,8 @@ The goal of this repository is not to showcase production-ready projects, but to
 ## Structure
 
 - [Basics](#basics)
-- [UI Apps](#uiapps)
-- [Machine Learning Lab](#ml-lab)
+- [UI Apps](#ui-apps)
+- [Machine Learning & AI](#machine-learning--ai)
 
 ---
 
