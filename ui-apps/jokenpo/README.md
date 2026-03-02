@@ -26,6 +26,3 @@ Being my first Flet project, it helped with:
 * **Event Handlers:** Using `on_click` to trigger functions.
 * **Component Updates:** Understanding the importance of `.update()` to reflect changes on the screen.
 * **Conditional Styling:** Changing text colors and icons dynamically based on game outcomes.
-
-## Future Improvements
-* Add a score counter for both player and bot.
