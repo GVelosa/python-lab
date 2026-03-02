@@ -24,7 +24,7 @@ See folder: [/basics](/basics)
 
 ---
 
-## UI
+## UI Apps
 
 UI experiments and desktop/web app prototypes built with Flet and streamlit.
 
