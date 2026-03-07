@@ -1,11 +1,11 @@
 import flet as ft
 import random
 
-def main(pagina: ft.Page):
+def main(page: ft.Page):
     #Configs
-    pagina.title = "Jo-Ken-Po"
-    pagina.vertical_alignment = ft.MainAxisAlignment.CENTER
-    pagina.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.title = "Jo-Ken-Po"
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     Ico_Size = 50
     Ico_Color = "04283D"
@@ -83,7 +83,7 @@ def main(pagina: ft.Page):
     )
 
     #add
-    pagina.add(
+    page.add(
          ft.Row(
             alignment=ft.MainAxisAlignment.CENTER,
             controls=[
