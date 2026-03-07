@@ -27,12 +27,3 @@ The program randomly selects a number between 1 and 100, and the user must guess
    - "Too high"
 5. The loop continues until the correct number is guessed.
 6. The program displays the total number of attempts.
-
----
-
-## How to Run
-
-Make sure you have Python installed (3.x).
-
-```bash
-python main.py

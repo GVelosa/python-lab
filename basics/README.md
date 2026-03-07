@@ -2,7 +2,9 @@
 
 This folder contains small terminal-based Python projects focused on core language concepts and foundational programming logic.
 
-These projects are intentionally simple and focused on strengthening fundamentals.
+Currently includes **2 projects**.
+
+These projects are intentionally simple and focused on strengthening fundamentals programming skills.
 
 ---
 
@@ -11,12 +13,13 @@ These projects are intentionally simple and focused on strengthening fundamental
 | Project | Description | Link |
 |---------|------------|------|
 | guess-the-number-cli | A simple terminal-based number guessing game. | [View Project](./guess-the-number-cli) |
+| factorial-calculator-cli | A simple program that calculates the factorial of a user-provided integer. | [View Project](./factorial-calculator-cli) |
 
 ---
 
 ## How Projects Are Structured
 
-Each project contains:
+Each project typically contains:
 
 - `main.py` (or equivalent entry file)
 - A dedicated `README.md` explaining:
@@ -29,4 +32,4 @@ Each project contains:
 
 ## Note
 
-All projects in this folder are terminal-based and focus on Python fundamentals rather than full application architecture.
+All projects in this folder are terminal-based and focus on Python fundamentals rather than full application architecture  or advanced frameworks.
