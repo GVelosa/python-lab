@@ -24,7 +24,7 @@ The goal here is to practice and reinforce core OOP principles through small, is
 - [Canal (Basic Class)](#canal-basic-class)
 - [Employee System](#employee-system)
 - [Channel System (Complete Example)](#channel-system-complete-example)
-- [Docs](./docs)
+- [Docs](#docs)
 
 ---
 
