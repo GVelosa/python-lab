@@ -24,9 +24,17 @@ A class is nothing more than a mold used to create objects. Let's use a YouTube 
 
 2. After creating the class, we define its attributes, which are the information that compose the class:
 
-    - name
-    - description
-    - subscribers
+```python
+class Channel:
+    def __init__(self, name, description, subscribers):
+        self.name = name
+        self.description = description
+        self.subscribers = subscribers
+```
+
+- The `__init__` function is called the constructor method. It is executed when instantiating the object.  
+- The `self` parameter refers to the instance itself. When we instantiate a class, `self` represents the specific object being created, not the class.  
+- Every method inside a class receives `self`.
 
 3. After defining the class and its attributes, the next step is to create the objects.
 
@@ -40,25 +48,10 @@ To create objects, we use the class as a mold. Based on this mold, the object mu
 - Description: "Programming Channel"
 - Subscribers: 34,000
 
-2. Let's implement it in code:
-
-```python
-class Channel:
-    def __init__(self, name, description, subscribers):
-        self.name = name
-        self.description = description
-        self.subscribers = subscribers
-```
-
-- The `__init__` function is called the constructor method. It is executed when instantiating the object.  
-- The `self` parameter refers to the instance itself. When we instantiate a class, `self` represents the specific object being created, not the class.  
-- Every method inside a class receives `self`.
-
-3. Usage Example:
+2. Usage Example:
 
 ```python
 canal_lancode = Channel("Lan Code", "Programming Channel", 34000)
-
 print(canal_lancode.description)
 ```
 
@@ -120,7 +113,7 @@ class EmployeeDirector(Employee):
 - Even when inheriting, we still need to define a constructor.
 - super() refers to the parent class and calls its constructor.
 
-3. Usage Example:
+2. Usage Example:
 
 ```python
 class Employee:
@@ -154,10 +147,9 @@ print(director_1.team)
 ## Encapsulation
 
 Some properties should not be modified directly. We may want validation before modifying them. This is where encapsulation comes in.
-
 We will prevent adding the same member twice to a team.
 
-Rename team to _team (convention for protected attribute):
+1. Rename team to _team (convention for protected attribute):
 
 ```python
 class EmployeeDirector(Employee):
