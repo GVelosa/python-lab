@@ -17,10 +17,10 @@ A class is nothing more than a mold used to create objects. Let's use a YouTube 
 
 1. We use the keyword `class` and then define the name of our class, for example `Channel`:
 
-    ```python
-    class Channel:
-        pass
-    ```
+```python
+class Channel:
+    pass
+```
 
 2. After creating the class, we define its attributes, which are the information that compose the class:
 
