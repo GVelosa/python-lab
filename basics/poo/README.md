@@ -21,10 +21,10 @@ The goal here is to practice and reinforce core OOP principles through small, is
 
 ## Structure
 
-- [Canal (Basic Class)](#canais)
-- [Employee System](#employee)
-- [Channel System (Complete Example)](#complete_composition)
-- [Docs](#docs)
+- [Canal (Basic Class)](#canal-basic-class)
+- [Employee System](#employee-system)
+- [Channel System (Complete Example)](#channel-system-complete-example)
+- [Docs](./docs)
 
 ---
 
