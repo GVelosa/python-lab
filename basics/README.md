@@ -14,6 +14,7 @@ These projects are intentionally simple and focused on strengthening fundamental
 |---------|------------|------|
 | guess-the-number-cli | A simple terminal-based number guessing game. | [View Project](./guess-the-number-cli) |
 | factorial-calculator-cli | A simple program that calculates the factorial of a user-provided integer. | [View Project](./factorial-calculator-cli) |
+| poo | A set of simple programs demonstrating Object-Oriented Programming (OOP) concepts in Python, including classes, methods, inheritance, and encapsulation. | [View Project](./poo) |
 
 ---
 
