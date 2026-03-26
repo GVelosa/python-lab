@@ -1,4 +1,4 @@
-# Python Labs - POO
+# POO
 
 This folder is part of my personal Python laboratory and focuses on studying **Object-Oriented Programming (OOP)** concepts.
 
