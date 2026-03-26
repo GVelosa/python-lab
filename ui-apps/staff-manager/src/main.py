@@ -5,10 +5,13 @@ from pages.login import login
 from pages.home import home
 from pages.register import register
 from pages.overview import overview
+from database.db import init_db
+
+init_db()
 
 def main(page: ft.Page):
     page.title = "Staff Manager"
-
+    
     def route_change():
         page.views.clear()
         page.views.append(

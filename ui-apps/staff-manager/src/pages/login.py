@@ -11,7 +11,7 @@ def login(page: ft.Page):
         await page.push_route("/home")
 
     user_login = ft.TextField(label="Enter Username/Email")
-    user_pass = ft.TextField(label="Create Password")
+    user_pass = ft.TextField(label="Password", password=True, can_reveal_password=True)
     login_button = genericButton("Login", to_home)
     signup_button = genericButton("Don't have an acconut?", to_signup)
 
