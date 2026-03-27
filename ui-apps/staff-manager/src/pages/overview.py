@@ -2,7 +2,7 @@ import flet as ft
 
 from components.genericButton import genericButton 
 
-def overview(page: ft.Page):
+def overview_view(page: ft.Page):
     
     async def to_home(e):
         await page.push_route("/home")

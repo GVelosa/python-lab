@@ -2,7 +2,8 @@ import flet as ft
 
 from components.genericButton import genericButton 
 from database.operations import create_user
-def signup(page: ft.Page):
+
+def signup_view(page: ft.Page):
     
     async def to_login(e):
         await page.push_route("/")

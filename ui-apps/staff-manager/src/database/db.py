@@ -36,7 +36,7 @@ def init_db():
                    department_id INTEGER NOT NULL,
                    is_manager INTEGER NOT NULL CHECK (is_manager IN (0, 1)),
                    manager_id INTEGER,
-                   salary REAL NOT NULL,
+                   salary DECIMAL(19, 4) NOT NULL,
                    hire_date TEXT NOT NULL,
                    performance_score REAL,
                    status TEXT DEFAULT 'active',

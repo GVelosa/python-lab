@@ -1,10 +1,12 @@
 import flet as ft
 
-from pages.signup import signup
-from pages.login import login
-from pages.home import home
-from pages.register import register
-from pages.overview import overview
+from pages.signup import signup_view
+from pages.login import login_view
+from pages.home import home_view
+from pages.register_employees import create_employee_view
+from pages.create_job_title import create_job_title_view
+from pages.overview import overview_view
+from pages.create_departments import create_departments
 from database.db import init_db
 
 init_db()
@@ -19,7 +21,7 @@ def main(page: ft.Page):
                 route="/",
                 bgcolor=ft.Colors.WHITE,
                 controls=[
-                    login(page)
+                    home_view(page)
                 ],
             )
         )
@@ -30,7 +32,7 @@ def main(page: ft.Page):
                     route="/signup",
                     bgcolor=ft.Colors.WHITE,
                     controls=[
-                        signup(page)
+                        signup_view(page)
                     ],
                 )
             )
@@ -40,17 +42,17 @@ def main(page: ft.Page):
                     route="/home",
                     bgcolor=ft.Colors.WHITE,
                     controls=[
-                        home(page)
+                        home_view(page)
                     ],
                 )
             )
-        if page.route == "/register":
+        if page.route == "/create_employee":
             page.views.append(
                 ft.View(
-                    route="/register",
+                    route="/create_employee",
                     bgcolor=ft.Colors.WHITE,
                     controls=[
-                        register(page)
+                        create_employee_view(page)
                     ],
                 )
             )
@@ -60,7 +62,29 @@ def main(page: ft.Page):
                     route="/overview",
                     bgcolor=ft.Colors.WHITE,
                     controls=[
-                        overview(page)
+                        overview_view(page)
+                    ],
+                )
+            )
+
+        if page.route == "/create_departments":
+            page.views.append(
+                ft.View(
+                    route="/create_departments",
+                    bgcolor=ft.Colors.WHITE,
+                    controls=[
+                        create_departments(page)
+                    ],
+                )
+            )
+
+        if page.route == "/create_job_title":
+            page.views.append(
+                ft.View(
+                    route="/create_job_title",
+                    bgcolor=ft.Colors.WHITE,
+                    controls=[
+                        create_job_title_view(page)
                     ],
                 )
             )

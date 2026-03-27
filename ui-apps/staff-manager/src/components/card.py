@@ -4,7 +4,7 @@ def content_card(name, description, on_click):
 
     return ft.Card(
         content=ft.GestureDetector(
-            on_tap= on_click,
+            on_tap=on_click,
             mouse_cursor = ft.MouseCursor.CLICK,
             content=ft.Container(
                 padding=16,
