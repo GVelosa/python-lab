@@ -17,19 +17,36 @@ def consute_user():
     users_account = cursor.fetchall()
     return users_account
 
-def create_department(title, manager_id=None):
-    cursor.execute("""INSERT INTO departments
-                   (title, manager_id) VALUES
-                   (?,?)""", (title, manager_id))
-    
 def consult_manager():
     cursor.execute("""SELECT name, manager_id FROM employees
                    WHERE is_manager == 1""")
     managers_ids = cursor.fetchall()
     return managers_ids
 
+def create_department(title, manager_id=None):
+    cursor.execute("""INSERT INTO departments
+                   (title, manager_id) VALUES
+                   (?,?)""", (title, manager_id))
+    conection.commit()
+    
+def consult_department():
+    cursor.execute("""SELECT id, title FROM departments""")
+    department_ids = cursor.fetchall()
+    return department_ids
+
 def create_jobs_title(title):
     cursor.execute("""INSERT INTO job_titles
-                   (title)
-                   (?)""", (title))
+                   (title) VALUES
+                   (?)""", (title,))
+    conection.commit()
     
+def consult_job_title():
+    cursor.execute("""SELECT * FROM job_titles""")
+    job_title_ids = cursor.fetchall()
+    return job_title_ids
+
+def create_employee(name, employee_code, job_title_id, department_id, is_manager, manager_id, salary, hire_date, performance_score, employment_type, created_at):
+    cursor.execute("""INSERT INTO employees
+                   (name, employee_code, job_title_id, department_id, is_manager, manager_id, salary, hire_date, performance_score, employment_type, created_at) VALUES
+                   (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", (name, employee_code, job_title_id, department_id, is_manager, manager_id, salary, hire_date, performance_score, employment_type, created_at))
+    conection.commit()

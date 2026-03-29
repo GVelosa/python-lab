@@ -1,58 +1,70 @@
 import flet as ft
 import random
+from datetime import datetime
 
-# from database.operations import consult_user
+from database.operations import consult_job_title,create_employee, consult_department
 
-employee_code = random.randint(10000, 99999)
-manager_id = random.randint(100, 999)
-# userenames = consult_user()
+jobs_titles = consult_job_title()
+departmet = consult_department()
 
 def create_employee_view(page: ft.Page):
 
+    def job_title_options():
+        if jobs_titles:
+            return [ft.DropdownOption(key=id, text=title) for id, title in jobs_titles]
+        else:
+            return None
+        
+    def department_options():
+        if departmet:
+            return [ft.DropdownOption(key=id, text=title) for id, title in departmet]
+        else:
+            return None
 
-    def on_click():
-        print(employment_type.value)
-    #     create_employee(
-    #         employee_name.value,
-    #         employee_code,
-    #         int(job_title_id.value),
-    #         int(department_id.value),
-    #         is_manager.value,
-    #         manager_id if is_manager else None,
-    #         float(salary.value),
-    #         hire_date.value,
-    #         float(performance_score.value) if performance_score.value else None,
-    #         status.value,
-    #         employment_type.value
-    #     )
+    def create():
+        employee_code = random.randint(10000, 99999)
+        manager_id = random.randint(100, 999)
+        create_employee(
+            employee_name.value,
+            employee_code,
+            int(job_title_id.value),
+            int(department_id.value),
+            is_manager.value,
+            manager_id if is_manager.value else None,
+            float(salary.value),
+            datetime.now().isoformat(),
+            float(performance_score.value) if performance_score.value else None,
+            employment_type.value,
+            datetime.now().isoformat()
+        )
 
     employee_name = ft.TextField(label="Name")
     # employee_code = ft.TextField(label="Employee Code")
-    job_title_id = ft.TextField(label="Job Title ID")
-    department_id = ft.TextField(label="Department ID")
+    job_title_id = ft.Dropdown(label="Job Title", options=job_title_options())
+    department_id = ft.Dropdown(label="Department", options=department_options())
     is_manager = ft.Switch(label="Is Manager?")
     # manager_id = ft.TextField(label="Manager ID (optional)")
     salary = ft.TextField(label="Salary")
-    hire_date = ft.TextField(label="Hire Date (YYYY-MM-DD)")
+    # hire_date = ft.TextField(label="Hire Date (YYYY-MM-DD)")
     performance_score = ft.TextField(label="Performance Score (optional)")
-    status = ft.Dropdown(label="Employee Status")
-    employment_type = ft.Dropdown(label="Employment Type", options=[])
+    # status = ft.TextField(label="Employee Status")
+    employment_type = ft.TextField(label="Employment Type")
 
-    create_button = ft.ElevatedButton("Create Employee", on_click=on_click)
+    create_button = ft.ElevatedButton("Create Employee", on_click=create)
 
-    create_employee = ft.Column(
+    create_employee_view = ft.Column(
         controls=[
             employee_name,
             job_title_id,
             department_id,
             is_manager,
             salary,
-            hire_date,
+            # hire_date,
             performance_score,
-            status,
+            # status,
             employment_type,
             create_button
         ]
     )
 
-    return create_employee
+    return create_employee_view

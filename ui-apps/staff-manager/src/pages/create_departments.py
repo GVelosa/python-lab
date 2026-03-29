@@ -8,12 +8,9 @@ def create_departments(page: ft.Page):
     
     def manager_options():
         if managers_infos:
-            return [ft.DropdownOption(key=managers) for managers in managers_infos[0]]
+            return [ft.DropdownOption(key=id, text=managers) for managers, id in managers_infos]
         else:
             return None
-
-    # def manager_name_to_id():
-    #     if manager.value
 
     def on_click():
         create_department(title.value, manager.value)

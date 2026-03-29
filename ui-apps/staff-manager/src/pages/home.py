@@ -14,7 +14,7 @@ def home_view(page: ft.Page):
         await page.push_route("/create_departments")
 
     async def to_create_job_title(e):
-        await page.push_route("/create_departments")
+        await page.push_route("/create_job_title")
 
     home_page = ft.Container(
         content=ft.Row(
