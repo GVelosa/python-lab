@@ -1,20 +1,20 @@
 # Staff Manager
 
-A Human Resources (HR) management system designed to streamline employee registration and role organization. This project was built to explore the synergy between **Object-Oriented Programming (OOP)**, relational databases, and modern UI development.
+A Human Resources (HR) management system designed to streamline employee registration and role organization. This project focuses on integrating relational databases with a modern UI to manage organizational data efficiently.
 
 > [!IMPORTANT]
-> The primary goal of this project is to strengthen core OOP concepts—such as inheritance, abstraction, and encapsulation—while utilizing **Flet** to create a functional and responsive interface, alongside **SQLite** for structured data persistence.
+> The primary goal of this project is to practice building a full application using **Flet** for the interface and **SQLite** for structured data persistence, focusing on clean data modeling and interaction between entities.
 
 ---
 
 ## Features
 
 * **User Authentication (Basic):** Platform user registration with validation and database persistence.
-* **Role-Based Hierarchy:** Utilizes a base `Employee` class with specialized subclasses (Manager, Developer, Intern, etc.) to handle specific attributes and behaviors.
-* **Interactive Registration:** A clean Flet-based form that adapts inputs according to the selected job role.
-* **Polymorphic Logic:** Shared methods (like salary or bonus calculations) that behave differently depending on the employee's class.
+* **Employee Management:** Create and manage employees with relationships to departments and job roles.
+* **Interactive Registration:** A clean Flet-based form for registering employees and related entities.
 * **Relational Data Modeling:** Employees are linked to departments and job roles using foreign keys, ensuring consistency and scalability.
 * **Data Organization:** Structured management of personnel records following real-world HR relationships (employee → manager → department).
+* **Database Queries:** Retrieve employee-related data such as job title, department, and manager relationships.
 
 ---
 
@@ -22,7 +22,7 @@ A Human Resources (HR) management system designed to streamline employee registr
 
 | Technology                        | Description                                                                    |
 | :-------------------------------- | :----------------------------------------------------------------------------- |
-| [Python](https://www.python.org/) | Core language used for business logic, OOP structure, and backend operations.  |
+| [Python](https://www.python.org/) | Core language used for backend logic and database operations.                  |
 | [Flet](https://flet.dev/)         | UI framework used to build a responsive graphical interface.                   |
 | SQLite                            | Lightweight relational database used for persistent storage and data modeling. |
 
@@ -52,18 +52,11 @@ The project uses a **normalized relational database structure** to ensure data c
 
 By evolving from simple scripts into a structured application, this project helped reinforce:
 
-### 🧠 OOP Concepts
-
-* **Inheritance:** Reducing code redundancy by sharing common traits (Name, ID, Email) in a parent class.
-* **Abstraction:** Creating template classes that shouldn't be instantiated directly, serving only as blueprints for roles.
-* **Encapsulation:** Protecting sensitive employee data (like salaries) using controlled access patterns.
-* **Polymorphism:** Implementing flexible behaviors depending on employee roles.
-
 ### 🗄️ Database & Backend Concepts
 
 * **Relational Modeling:** Designing structured relationships between entities like employees, departments, and roles.
 * **Data Integrity:** Using constraints (`UNIQUE`, `CHECK`, `FOREIGN KEY`) to ensure reliable data.
-* **Separation of Concerns:** Keeping UI, business logic, and database operations independent.
+* **Separation of Concerns:** Keeping UI and database operations organized and maintainable.
 * **Scalability Thinking:** Structuring the database in a way that allows future expansion without major refactoring.
 
 ### 🎨 UI Architecture
@@ -75,7 +68,6 @@ By evolving from simple scripts into a structured application, this project help
 ## Future Improvements
 
 * Implement password hashing (security enhancement)
-* Add login system and session control
 * Create dashboards with employee analytics
 * Introduce performance review history tracking
 * Improve validation and error handling in UI

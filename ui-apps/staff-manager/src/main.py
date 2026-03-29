@@ -21,7 +21,7 @@ def main(page: ft.Page):
                 route="/",
                 bgcolor=ft.Colors.WHITE,
                 controls=[
-                    home_view(page)
+                    login_view(page)
                 ],
             )
         )
