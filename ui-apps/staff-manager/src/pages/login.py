@@ -1,7 +1,11 @@
 import flet as ft
 
 from components.genericButton import genericButton 
+from components.genericTextField import genericTextField
+
 from database.operations import consute_user
+
+from theme import colors
 
 users_account = consute_user()
 
@@ -25,8 +29,8 @@ def login_view(page: ft.Page):
 
     
 
-    user_login = ft.TextField(label="Enter Username/Email")
-    user_pass = ft.TextField(label="Password", password=True, can_reveal_password=True)
+    user_login = genericTextField("Enter Username/Email")
+    user_pass = genericTextField("Password", "", True, True)
     login_button = genericButton("Login", login_call)
     signup_button = genericButton("Don't have an acconut?", to_signup)
     confirm_text = ft.Text(value="", color=ft.Colors.RED)
@@ -34,7 +38,7 @@ def login_view(page: ft.Page):
     login_page = ft.Container(
         border_radius=10,
         padding=16,
-        bgcolor=ft.Colors.AMBER_800,
+        bgcolor=colors.TANZINE,
         content=ft.Column(
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             controls=[

@@ -8,6 +8,7 @@ from pages.create_job_title import create_job_title_view
 from pages.overview import overview_view
 from pages.create_departments import create_departments
 from database.db import init_db
+from theme import colors
 
 init_db()
 
@@ -19,7 +20,7 @@ def main(page: ft.Page):
         page.views.append(
             ft.View(
                 route="/",
-                bgcolor=ft.Colors.WHITE,
+                bgcolor=colors.WHITE,
                 controls=[
                     login_view(page)
                 ],
@@ -29,8 +30,9 @@ def main(page: ft.Page):
         if page.route == "/signup":
             page.views.append(
                 ft.View(
+                    align=ft.Alignment.CENTER,
                     route="/signup",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         signup_view(page)
                     ],
@@ -40,7 +42,7 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                     route="/home",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         home_view(page)
                     ],
@@ -50,7 +52,7 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                     route="/create_employee",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         create_employee_view(page)
                     ],
@@ -60,7 +62,7 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                     route="/overview",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         overview_view(page)
                     ],
@@ -71,7 +73,7 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                     route="/create_departments",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         create_departments(page)
                     ],
@@ -82,7 +84,7 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                     route="/create_job_title",
-                    bgcolor=ft.Colors.WHITE,
+                    bgcolor=colors.WHITE,
                     controls=[
                         create_job_title_view(page)
                     ],
