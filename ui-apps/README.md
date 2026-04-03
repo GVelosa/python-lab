@@ -11,6 +11,7 @@ These projects explore layout design, event handling, and reactive programming u
 | **jokenpo** | A functional Rock-Paper-Scissors(Jo-Ken-Po) game; my introductory project to building interactive UIs with Flet. | [View Project](./jokenpo) |
 | **qr-code-generator** | A web-based utility to generate and download QR Codes instantly. | [View Project](./qr-code-generator) |
 | **cards** | A study project focused on creating reusable card components and exploring component-based UI design with Flet. | [View Project](./cards) |
+| **counter** | A simple graphical countdown timer built with Python. | [View Project](./counter) |
 
 
 ## Project Development Patterns
