@@ -1,47 +1,43 @@
 import flet as ft
 
+from pages.home.view import home_view
+from pages.single_game.view import single_game_view
+
 def main(page: ft.Page):
-    page.title = "Wordle Clone"
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.title = "Wordle"
 
-    async def next_field(e, next_control):
-        if len(e.control.value) == 1:
-            await next_control.focus()
-
-    game_title = ft.Text(
-        "Wordle Clone",
-        theme_style=ft.TextThemeStyle.HEADLINE_LARGE
-    )
-
-    letter_1 = ft.TextField(capitalization=ft.TextCapitalization.WORDS, max_length=1, width=50)
-    letter_2 = ft.TextField(capitalization=ft.TextCapitalization.WORDS, max_length=1, width=50)
-    letter_3 = ft.TextField(capitalization=ft.TextCapitalization.WORDS, max_length=1, width=50)
-    letter_4 = ft.TextField(capitalization=ft.TextCapitalization.WORDS, max_length=1, width=50)
-    letter_5 = ft.TextField(capitalization=ft.TextCapitalization.WORDS, max_length=1, width=50)
-
-    async def l1(e):
-        await next_field(e, letter_2)
-
-    async def l2(e):
-        await next_field(e, letter_3)
-
-    async def l3(e):
-        await next_field(e, letter_4)
-
-    async def l4(e):
-        await next_field(e, letter_5)
-
-    letter_1.on_change = l1
-    letter_2.on_change = l2
-    letter_3.on_change = l3
-    letter_4.on_change = l4
-
-    page.add(
-        game_title,
-        ft.Row(
-            alignment=ft.MainAxisAlignment.CENTER,
-            controls=[letter_1, letter_2, letter_3, letter_4, letter_5]
+    def route_change():
+        page.views.clear()
+        page.views.append(
+            ft.View(
+                route="/",
+                controls=[
+                    home_view(page)
+                ]
+            )
         )
-    )
+        if page.route == "/single_game":
+                page.views.append(
+                ft.View(
+                    route="/signup",
+                    appbar= None,
+                    controls=[
+                        single_game_view(page)
+                    ],
+                )
+            )
 
-ft.run(main)
+        page.update()
+    async def view_pop(e):
+        if e.view is not None:
+            print("View pop:", e.view)
+            page.views.remove(e.view)
+            top_view = page.views[-1]
+            await page.push_route(top_view.route)
+
+    page.on_route_change = route_change
+    page.on_view_pop = view_pop
+    route_change()
+
+if __name__ == "__main__":
+    ft.run(main)
