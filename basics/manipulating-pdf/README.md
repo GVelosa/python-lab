@@ -1,5 +1,10 @@
 # Manipulating PDF
 
+> **Note**  
+> This material was created based on the content from the course:  
+> [Python Automático: Aprenda a Programar e Automatizar do Zero](https://www.udemy.com/course/python-automatico-aprenda-a-programar-e-automatizar-do-zero/)  
+> Specifically from **Section 21**.
+
 This script is focuses on studying **PDF reading and text extraction using Python**.
 
 It covers the fundamental concepts of working with PDF files:
